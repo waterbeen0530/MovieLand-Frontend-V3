@@ -1,13 +1,17 @@
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
-import Header from "./components/common/Header";
-import IntroPage from "./components/IntroPage";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
+import IntroPage from "../components/IntroPage";
+import MoviePage from "../components/MoviePage";
 
 const Home: NextPage = () => {
   return (
     <Container>
       <Header />
       <IntroPage />
+      <MoviePage />
+      <Footer />
     </Container>
   );
 };
