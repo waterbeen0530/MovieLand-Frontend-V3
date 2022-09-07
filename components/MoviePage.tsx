@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { movieType } from "../interface/movie";
 import axios from "axios";
-import { getGenreReg, getTitleReg } from "../utils/stop19";
 import MainPage from "./MainPage";
 
 export default function MoviePage() {
