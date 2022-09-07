@@ -8,10 +8,10 @@ import MoviePage from "../components/MoviePage";
 const Home: NextPage = () => {
   return (
     <Container>
-      <Header />
-      <IntroPage />
+      {/* <Header />
+      <IntroPage /> */}
       <MoviePage />
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };

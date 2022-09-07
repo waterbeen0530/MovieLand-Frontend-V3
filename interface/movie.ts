@@ -1,24 +1,16 @@
-interface directorType {
-  peopleNm: string;
-}
-
-interface companyType {
-  companyCd: string;
-  companyNm: string;
-}
-
 export interface movieType {
-  movieCd: string;
-  movieNm: string;
-  movieNmEn: string;
-  prdtYear: string;
-  openDt: string;
-  typeNm: string;
-  prdtStatNm: string;
-  nationAlt: string;
-  genreAlt: string;
-  repNationNm: string;
-  repGenreNm: string;
-  directors: directorType[];
-  companys: companyType[];
+  adult: Boolean;
+  backdrop_path: string;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  release_date: number;
+  title: string;
+  video: Boolean;
+  vote_average: number;
+  vote_count: number;
 }
