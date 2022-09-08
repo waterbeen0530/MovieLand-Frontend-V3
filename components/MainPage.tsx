@@ -18,19 +18,19 @@ export default function MainPage({ movie }: props) {
 }
 
 const Container = styled.div`
-  width: 270px;
-  border: 1px solid red;
-  h2 {
-  }
-`;
-
-const CoverImg = styled.div`
-  width: 100%;
-  height: 170px;
+  width: 280px;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: red;
+  border-radius: 5px;
+  background: #fff;
   img {
+    width: 250px;
+    height: 100%;
+    margin: 15px 0 0;
+  }
+  h1 {
+    font-size: 26px;
   }
 `;

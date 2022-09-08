@@ -8,10 +8,10 @@ import MoviePage from "../components/MoviePage";
 const Home: NextPage = () => {
   return (
     <Container>
-      {/* <Header />
-      <IntroPage /> */}
+      <Header />
+      <IntroPage />
       <MoviePage />
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 };
@@ -20,7 +20,6 @@ export default Home;
 
 const Container = styled.div`
   height: 100vh;
-  width: 100vw;
   /* background-color: red;
   @media (max-width: 600px) {
     background-color: blue;
