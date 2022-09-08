@@ -21,7 +21,7 @@ export default function IntroPage() {
 
 const Container = styled.div`
   position: relative;
-  height: 90vh;
+  height: 100vh;
   padding-top: 80px;
   display: flex;
   justify-content: flex-start;
