@@ -24,7 +24,7 @@ export default function MoviePage() {
 
   return (
     <>
-      <Container>
+      <Container id="movieList">
         {loading ? (
           <h1>Loading...</h1>
         ) : (

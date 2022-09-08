@@ -1,13 +1,22 @@
 import styled from "@emotion/styled";
+import { Link } from "react-scroll";
 
 export default function Header() {
   return (
     <Container>
-      <h2>MovieLand</h2>
+      <Link to="intro" spy={true} smooth={true}>
+        <h2>MovieLand</h2>
+      </Link>
       <div>
-        <p>Introduce</p>
-        <p>Movie list</p>
-        <p>Developer</p>
+        <Link to="intro" spy={true} smooth={true}>
+          <p>Introduce</p>
+        </Link>
+        <Link to="movieList" spy={true} smooth={true}>
+          <p>Movie list</p>
+        </Link>
+        <Link to="footer" spy={true} smooth={true}>
+          <p>Developer</p>
+        </Link>
       </div>
     </Container>
   );
