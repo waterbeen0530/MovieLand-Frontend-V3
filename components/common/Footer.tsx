@@ -14,7 +14,9 @@ export default function Footer() {
           <div id="div2">
             <p>Lim SuBeen</p>
             <p>Nomad Coders</p>
-            <p>https://nomadcoders.co/react-for-beginners/lobby</p>
+            <a href="https://nomadcoders.co/react-for-beginners/lobby">
+              <p>https://nomadcoders.co/react-for-beginners/lobby</p>
+            </a>
           </div>
           <div className="div3">
             <a href="https://www.facebook.com/profile.php?id=100064560693847">

@@ -48,6 +48,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background: #1d282e;
+  h1 {
+    color: #fff;
+  }
   h3 {
     text-align: center;
     font-size: 50px;
