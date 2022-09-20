@@ -3,10 +3,22 @@ import { movieType } from "../interface/movie";
 import axios from "axios";
 import MainPage from "./MainPage";
 import styled from "@emotion/styled";
+import Pagination from "./Pagination";
 
 export default function MoviePage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [movies, setMovies] = useState<movieType[]>([]);
+  const [limit, setLimit] = useState<number>(10);
+  const [page, setPage] = useState<number>(1);
+  const offset: number = (page - 1) * limit;
+
+  /**
+   * api 가져오기
+   */
+
+  const changePageValue = (newPage: number): void => {
+    setPage(newPage);
+  };
 
   const getMovies = async () => {
     await axios(
@@ -31,10 +43,18 @@ export default function MoviePage() {
           <>
             <h3>Movie List</h3>
             <Wrapper>
-              {movies.map((movie) => (
+              {movies.slice(offset, offset + limit).map((movie) => (
                 <MainPage key={movie.title} movie={movie} />
               ))}
             </Wrapper>
+            <footer>
+              <Pagination
+                total={movies.length}
+                limit={limit}
+                page={page}
+                setPage={changePageValue}
+              />
+            </footer>
           </>
         )}
       </Container>
@@ -43,7 +63,7 @@ export default function MoviePage() {
 }
 
 const Container = styled.div`
-  padding: 0 0 60px;
+  padding: 0 0 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,5 +82,5 @@ const Container = styled.div`
 const Wrapper = styled.div`
   gap: 30px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
 `;
