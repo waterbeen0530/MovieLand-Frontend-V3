@@ -12,13 +12,14 @@ export default function MainPage({ movie }: props) {
         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
         alt=""
       />
+
       <h1>{movie.title}</h1>
     </Container>
   );
 }
 
 const Container = styled.div`
-  width: 280px;
+  width: 185px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26,11 +27,14 @@ const Container = styled.div`
   border-radius: 5px;
   background: #fff;
   img {
-    width: 250px;
+    width: 170px;
     height: 100%;
-    margin: 15px 0 0;
+    margin: 7px 0 0;
   }
   h1 {
-    font-size: 26px;
+    width: 170px;
+    text-align: center;
+    font-size: 17px;
+    color: #1d282e;
   }
 `;
